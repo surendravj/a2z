@@ -3,6 +3,8 @@ import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { setActiveCircle } from '../state/circle'
 
+
+///hdfjhdjfjh
 export default function Circle ({ id, count, color, textColor, circle }) {
   const circleStyle = {
     width: '10vw',
