@@ -23,30 +23,42 @@ export default function Home () {
   return (
     <div className='container py-5'>
       <Breadcrumb />
-      <div className='row px-5'>
+      <div className='row ml-5 mr-5 d-flex justify-content-center mt-5'>
         {circles.map((circle, index) => {
           return (
-            <div className='col-2 col-xs-12'>
-              <Circle
-                circle={circle}
-                count={circle.circleCount}
-                textColor={circle.circleTextColor}
-                color={circle.circleColor}
-                id={circle.circleId}
-              />
-              <div className='d-flex justify-content-between mt-2 mb-5'>
-                <button
-                  className='btn btn-dark'
-                  onClick={() => dispatch(addCircle(index))}
+            <div className='col-md-2 col-sm-2 col-xs-12 '>
+              <div className='d-flex justify-content-center mt-2 mb-2 '>
+                <Circle
+                  circle={circle}
+                  count={circle.circleCount}
+                  textColor={circle.circleTextColor}
+                  color={circle.circleColor}
+                  id={circle.circleId}
+                />
+              </div>
+
+              <div className='d-flex flex-row justify-content-center mt-2 mb-5'>
+                <div
+                  class='btn-group'
+                  role='group'
+                  aria-label='Basic mixed styles example'
                 >
-                  Clone
-                </button>
-                <button
-                  className='btn btn-danger'
-                  onClick={() => handleIncrement(circle.circleId, index)}
-                >
-                  Increment
-                </button>
+                  <button
+                    onClick={() => handleIncrement(circle.circleId, index)}
+                    type='button'
+                    class='btn btn-danger'
+                  >
+                    Increment
+                  </button>
+                  <button
+                   onClick={() => dispatch(addCircle(index))}
+                   
+                    type='button'
+                    class='btn btn-warning'
+                  >
+                    Replicate
+                  </button>
+                </div>
               </div>
             </div>
           )
