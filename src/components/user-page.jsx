@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useParams, Link } from 'react-router-dom'
-import user, { setActiveUser, setUsers } from '../state/user'
+import { setActiveUser, setUsers } from '../state/user'
 import Breadcrumb from './navbar'
 import Loader from './loader'
 

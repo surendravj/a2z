@@ -7,6 +7,7 @@ import { generateRandomColor, getTextColor } from '../helpers/colorgenerator'
 import Breadcrumb from './navbar'
 
 export default function Home () {
+  // eslint-disable-next-line no-unused-vars
   const [backgroundColor, setBackgroundColor] = useState('#F7DE3A')
   const [textColor, setTextColor] = useState('#000000')
   const circles = useSelector(state => state.circleReducer.circles)

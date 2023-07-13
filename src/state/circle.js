@@ -27,6 +27,7 @@ export const circleSlice = createSlice({
     },
     incrementCircleCount: (state, action) => {
       const { id, bgColor, textColor } = action.payload
+      // eslint-disable-next-line array-callback-return
       state.circles.map(circle => {
         if (circle.circleId === id) {
           circle.circleCount += 1
